@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
     <title>Наш Сад</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
@@ -14,10 +14,22 @@
                 <a class="header__logo" href="https://qshau.github.io/ChelInvest/">
                     <img class="header__logo" alt="логотип" src="images/header-logo.png">
                 </a>
-                <a class="header__link" href="https://qshau.github.io/ChelInvest/request">Вход в систему</a>
+                <a class="header__link" href="#">Вход в систему</a>
             </div>
         </div>
     </header>
+    <div class="form-wrapper">
+        <form class="header__form" action="#">
+            <button class="header__form-close"></button>
+            <h4 class="header__form-title">Вход в систему «Наш сад»</h4>
+            <div class="header__form-input--error-message">Введённый имя пользователя или пароль неверный</div>
+            <div class="header__form-wrapper">
+                <input class="header__form-input" type="text" placeholder="логин">
+                <input class="header__form-input" type="password" placeholder="пароль">
+            </div>
+            <button class="header__form-submit">>></button>
+        </form>
+    </div>
     <div class="wrapper">
         <main class="main">
             <section class="tariffs">
@@ -41,13 +53,13 @@
                                     БАЗОВЫЙ ТАРИФ
                                 </li>
                                 <li class="tariffs__item-list__item">
-                                    любое количество участков
+                                    любое количество  участков
                                 </li>
                                 <li class="tariffs__item-list__item">
                                     любое количество пользователей
                                 </li>
                                 <li class="tariffs__item-list__item">
-                                    круглосуточная поддержка
+                                    круглосуточная  поддержка
                                 </li>
                             </ul>
                             <span class="tariffs__item-price">
@@ -76,7 +88,7 @@
                                 </li>
                                 <li class="tariffs__item-list__item">
                                     <input id="radio-1" class="tariffs__item-list__item-radio" type="radio" name="choose" value="Личный кабинет садовода">
-                                    <label for="radio-1">Личный кабинет садовода</label>
+                                    <label for="radio-1">Личный кабинет <br> садовода</label>
                                 </li>
                                 <li class="tariffs__item-list__item">
                                     <input id="radio-2" class="tariffs__item-list__item-radio" type="radio" name="choose" value="Архив сканированных документов">
@@ -119,7 +131,7 @@
                                 </li>
                             </ul>
                             <span class="tariffs__item-price">
-                                3 000р
+                                3 000 р
                             </span>
                             <p class="tariffs__item-footnote">
                                 плюс НДС
@@ -151,7 +163,7 @@
                                 </li>
                             </ul>
                             <span class="tariffs__item-price">
-                                36 000р
+                                36 000 р
                             </span>
                             <p class="tariffs__item-footnote">
                                 плюс НДС
@@ -168,11 +180,16 @@
                     <p class="tariffs__subtitle">
                         Оставьте заявку и наш специалист Вам перезвонит для подробной консультации
                     </p>
-
                     <form class="tariffs__form" action="#">
-                        <input class="tariffs__form-item" type="text" placeholder="Имя">
-                        <input class="tariffs__form-item tariffs__form-item-tel" type="tel" placeholder="контактный телефон">
-                        <button class="tariffs__form-btn">>></button>
+                        <div class="tariffs__form-wrapper">
+                            <input class="tariffs__form-item" type="text" placeholder="Имя*">
+                            <span class="tariffs__message-error">*Поле обязательно для заполнения</span>
+                        </div>
+                        <div class="tariffs__form-wrapper">
+                            <input class="tariffs__form-item tariffs__form-item-tel" type="tel" placeholder="контактный телефон*">
+                            <span class="tariffs__message-error">*Поле обязательно для заполнения</span>
+                        </div>
+                        <button class="tariffs__form-btn" type="submit">>></button>
                     </form>
                 </div>
             </section>

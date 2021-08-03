@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
     <title>Наш Сад</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
@@ -14,10 +14,22 @@
                 <a class="header__logo" href="https://qshau.github.io/ChelInvest/">
                     <img class="header__logo" alt="логотип" src="images/header-logo.png">
                 </a>
-                <a class="header__link" href="https://qshau.github.io/ChelInvest/request">Вход в систему</a>
+                <a class="header__link" href="#">Вход в систему</a>
             </div>
         </div>
     </header>
+    <div class="form-wrapper">
+        <form class="header__form" action="#">
+            <button class="header__form-close"></button>
+            <h4 class="header__form-title">Вход в систему «Наш сад»</h4>
+            <div class="header__form-input--error-message">Введённый имя пользователя или пароль неверный</div>
+            <div class="header__form-wrapper">
+                <input class="header__form-input" type="text" placeholder="логин">
+                <input class="header__form-input" type="password" placeholder="пароль">
+            </div>
+            <button class="header__form-submit">>></button>
+        </form>
+    </div>
     <div class="wrapper">
         <main class="main">
             <section class="request">
@@ -29,10 +41,22 @@
                         Оставьте свои данные и наш специалист Вам перезвонит
                     </p>
                     <form class="request__form" action="#">
-                        <input class="request__form-item" type="text" placeholder="Имя">
-                        <input class="request__form-item request__form-item-tel" type="tel" placeholder="контактный телефон">
-                        <input class="request__form-item request__form-item-email" type="email" placeholder="e-mail">
-                        <input class="request__form-item" type="text" placeholder="Ваше СНТ или дачный кооператив">
+                        <div class="request__form-wrapper">
+                            <input class="request__form-item" type="text" placeholder="Имя*">
+                            <span class="request__form-error">Поле Имя обязательно для заполнения</span>
+                        </div>
+                        <div class="request__form-wrapper">
+                            <input class="request__form-item request__form-item-tel" type="tel" placeholder="контактный телефон*">
+                            <span class="request__form-error">Поле Контактный телефон обязательно для заполнения</span>
+                        </div>
+                        <div class="request__form-wrapper">
+                            <input class="request__form-item request__form-item-email" type="email" placeholder="e-mail*">
+                            <span class="request__form-error">Поле e-mail обязательно для заполнения</span>
+                        </div>
+                        <div class="request__form-wrapper">
+                            <input class="request__form-item" type="text" placeholder="Ваше СНТ или дачный кооператив*">
+                            <span class="request__form-error">Поле обязательно для заполнения</span>
+                        </div>
                         <button class="request__form-btn">>></button>
                     </form>
                     <p class="request__connection">
